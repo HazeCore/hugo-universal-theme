@@ -1143,7 +1143,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .home-carousel {
   position: relative;
-  background: url('../img/photogrid.jpg') center center repeat;
+  background: url('/img/gg_rose.png') center center repeat;
   background-size: cover;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -1774,9 +1774,10 @@ fieldset[disabled] .btn-template-primary.active {
   background-size: cover;
 }
 .bar.background-image-fixed-2 {
-  background: url('../img/fixed-background-2.jpg') center top no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/gg_verbeugung_crop.jpg') center top no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  filter: blur(0px);
 }
 .bar.color-white h1,
 .bar.color-white h2,
