@@ -1,3 +1,26 @@
+if (document.readyState === "complete" 
+     || document.readyState === "loaded" 
+     || document.readyState === "interactive") {
+      onContentLoaded();
+} else {
+  window.addEventListener("DOMContentLoaded",onContentLoaded);
+}
+window.addEventListener("resize", resizeYoutube);
+
+  function onContentLoaded(){
+    resizeYoutube();
+  }
+  
+  function resizeYoutube() {
+      var ytVideos = document.querySelectorAll("iframe.ytdiv");
+      for(let i = 0;i < ytVideos.length; i++) {
+          ytVideos[i].height = ytVideos[i].getBoundingClientRect().width * 0.56;
+      }
+  }
+  
+
+/* --------------------------------------------- */
+
 /* global $this: true */
 /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "animationsSlider" }] */
 

@@ -1,16 +1,20 @@
 {{ if isset .Site.Params "vid_msg" }}
 {{ if .Site.Params.vid_msg.enable }}
+
+
+
 <section class="bar background-white text-center py-0 no-my no-py">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h3 class="text-uppercase">{{ .Site.Params.vid_msg.title }}</h3>
                 <p class="lead">{{ .Site.Params.vid_msg.subtitle }}</p>
-                <iframe width="560" height="315" src="{{ .Site.Params.vid_msg.vid_iframe }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="ytdiv" src="{{ .Site.Params.vid_msg.vid_iframe }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
         </div>
     </div>
+    <script src="front.js"></script>
 </section>
 {{ end }}
 {{ end }}
