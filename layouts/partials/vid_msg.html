@@ -8,8 +8,15 @@
         <div class="row">
             <div class="col-md-12">
                 <h3 class="text-uppercase">{{ .Site.Params.vid_msg.title }}</h3>
-                <p class="lead">{{ .Site.Params.vid_msg.subtitle }}</p>
-                <iframe class="ytdiv" src="{{ .Site.Params.vid_msg.vid_iframe }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p class="lead">{{ .Site.Params.vid_msg.subtitle | safeHTML}}</p>
+                <!--<iframe class="ytdiv" src="{{ .Site.Params.vid_msg.vid_iframe }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                {{ if isset .Site.Params.vid_msg "vid_iframe" }}
+                    <iframe class="ytdiv" src="{{ .Site.Params.vid_msg.vid_iframe }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {{ end }}
+                {{ if isset .Site.Params.vid_msg "vid_pic" }}
+                <div class="imgdiv"><img style="width:100%" src="{{ .Site.Params.vid_msg.vid_pic }}"></img></div>
+                {{ end }}
+
             </div>
 
         </div>
