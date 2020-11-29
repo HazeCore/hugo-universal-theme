@@ -1,0 +1,41 @@
+{{ if isset .Site.Params "advent" }}
+{{ if .Site.Params.advent.enable }}
+
+<section class="bar background-white text-center py-0 no-my no-py">
+    <div class="container">
+        <h3 class="text-uppercase">{{ .Site.Params.advent.title }}</h3>
+        <div class="adventRow">
+            <div class="adventCol">
+                <div class="adventBox advent-1 {{ .Site.Params.advent.adv1_disabled }}">
+                    <a href="{{ .Site.Params.advent.adv1_link }}" target="_blank">
+                        <img class="door-picture" src="{{ .Site.Params.advent.adv1_picture }}"/>
+                    </a>
+                </div>
+            </div>
+            <div class="adventCol">
+                <div class="adventBox advent-2 {{ .Site.Params.advent.adv2_disabled }}">
+                    <a href="{{ .Site.Params.advent.adv2_link }}" target="_blank">
+                        <img class="door-picture" src="{{ .Site.Params.advent.adv2_picture }}"/>
+                    </a>
+                </div>
+            </div>
+            <div class="adventCol">
+                <div class="adventBox advent-3 {{ .Site.Params.advent.adv3_disabled }}">
+                    <a href="{{ .Site.Params.advent.adv3_link }}" target="_blank">
+                        <img class="door-picture" src="{{ .Site.Params.advent.adv3_picture }}"/>
+                    </a>
+                </div>
+            </div>
+            <div class="adventCol">
+                <div class="adventBox advent-4 {{ .Site.Params.advent.adv4_disabled }}">
+                    <a href="{{ .Site.Params.advent.adv4_link }}" target="_blank">
+                        <img class="door-picture" src="{{ .Site.Params.advent.adv4_picture }}"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="front.js"></script>
+</section>
+{{ end }}
+{{ end }}
