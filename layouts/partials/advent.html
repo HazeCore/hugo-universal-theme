@@ -1,7 +1,7 @@
 {{ if isset .Site.Params "advent" }}
 {{ if .Site.Params.advent.enable }}
 
-<section class="bar background-white text-center py-0 no-my no-py">
+<section class="bar background-white text-center py-0 no-my no-py no-mb" style="padding-bottom: 0px">
     <div class="container">
         <h3 class="text-uppercase">{{ .Site.Params.advent.title }}</h3>
         <div class="adventRow">
@@ -34,6 +34,7 @@
                 </div>
             </div>
         </div>
+        <p class="lead">{{ .Site.Params.advent.text | safeHTML}}</p>
     </div>
     <script src="front.js"></script>
 </section>
