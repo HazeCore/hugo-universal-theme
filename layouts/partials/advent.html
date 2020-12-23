@@ -35,6 +35,10 @@
             </div>
         </div>
         <p class="lead">{{ .Site.Params.advent.text | safeHTML}}</p>
+        {{ if isset .Site.Params.advent "vid_iframe" }}
+            <h3 class="text-uppercase">Adventskonzert der German Gents</h3>
+            <iframe class="ytdiv" src="{{ .Site.Params.advent.vid_iframe }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {{ end }}
     </div>
     <script src="front.js"></script>
 </section>
